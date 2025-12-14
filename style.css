@@ -10,14 +10,17 @@ body {
     background-color: #121212;
     color: #e0e0e0;
     line-height: 1.6;
+    transition: background 0.3s ease;
 }
 
 a {
     color: #00bcd4;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
+    color: #ff9800;
     text-decoration: underline;
 }
 
@@ -34,6 +37,7 @@ header {
     background-color: #1f1f1f;
     padding: 3rem 0;
     text-align: center;
+    transition: background 0.3s ease;
 }
 
 .header-container {
@@ -49,12 +53,23 @@ header {
     object-fit: cover;
     border: 3px solid #00bcd4;
     margin-bottom: 1rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.1) rotate(3deg);
+    box-shadow: 0 0 20px #00bcd4;
 }
 
 header h1 {
     font-size: 1.8rem;
     margin-bottom: 0.5rem;
     color: #00bcd4;
+    transition: color 0.3s ease;
+}
+
+header h1:hover {
+    color: #ff9800;
 }
 
 header p {
@@ -71,6 +86,21 @@ section h2 {
     font-size: 1.5rem;
     margin-bottom: 1rem;
     color: #00bcd4;
+    position: relative;
+    display: inline-block;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #ff9800;
+    transition: width 0.3s;
+}
+
+section h2:hover::after {
+    width: 100%;
 }
 
 section ul {
@@ -79,7 +109,16 @@ section ul {
 }
 
 section ul li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.7rem;
+    padding: 0.3rem 0.5rem;
+    border-radius: 5px;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+section ul li:hover {
+    transform: translateX(10px);
+    background-color: #1a73e8;
+    color: #fff;
 }
 
 /* Footer */
@@ -89,6 +128,7 @@ footer {
     background-color: #1f1f1f;
     color: #777;
     margin-top: 2rem;
+    transition: background 0.3s ease;
 }
 
 /* Responsive */
