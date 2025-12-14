@@ -1,3 +1,6 @@
+body {
+    background-color: red !important;
+}
 /* GLOBAL */
 * {
     box-sizing: border-box;
